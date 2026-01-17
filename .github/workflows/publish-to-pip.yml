@@ -33,8 +33,4 @@ jobs:
           python -m build --sdist --wheel
 
       - name: Publish to PyPI
-        run: |
-          twine upload --non-interactive dist/* --verbose
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: $ACTIONS_ID_TOKEN_REQUEST_TOKEN
+        uses: pypa/gh-action-pypi-publish@release/v1
