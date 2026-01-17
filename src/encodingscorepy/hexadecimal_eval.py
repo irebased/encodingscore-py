@@ -1,5 +1,5 @@
 import re
-from evaluator import Evaluator
+from .evaluator import Evaluator
 
 class HexadecimalEvaluator(Evaluator):
 

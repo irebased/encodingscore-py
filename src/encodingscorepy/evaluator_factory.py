@@ -1,7 +1,7 @@
-from base64_eval import Base64Evaluator
-from hexadecimal_eval import HexadecimalEvaluator
-from octal_eval import OctalEvaluator
-from decimal_eval import DecimalEvaluator
+from .base64_eval import Base64Evaluator
+from .hexadecimal_eval import HexadecimalEvaluator
+from .octal_eval import OctalEvaluator
+from .decimal_eval import DecimalEvaluator
 
 class EvaluatorFactory:
 

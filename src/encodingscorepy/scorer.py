@@ -1,6 +1,6 @@
 import re
-from validation import Validator
-from evaluator_factory import EvaluatorFactory
+from .validation import Validator
+from .evaluator_factory import EvaluatorFactory
 
 SUPPORTED_ENCODINGS = [
     "base64",

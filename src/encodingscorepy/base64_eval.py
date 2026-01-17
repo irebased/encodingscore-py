@@ -1,6 +1,6 @@
 import base64
 import re
-from evaluator import Evaluator
+from .evaluator import Evaluator
 
 class Base64Evaluator(Evaluator):
 

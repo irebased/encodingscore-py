@@ -1,5 +1,5 @@
 import re
-from evaluator import Evaluator
+from .evaluator import Evaluator
 
 class DecimalEvaluator(Evaluator):
     DEC_RE = re.compile(r'^[0-9]+$')
