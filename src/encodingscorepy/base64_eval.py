@@ -25,13 +25,7 @@ class Base64Evaluator(Evaluator):
                 if len(bin_bytes) != 3:
                     continue
 
-                for b in bin_bytes:
-                    c = chr(b)
-                    if not self.validator.validate(c):
-                        print("FAIL:", b, repr(c))
-
                 ok = True
-
                 for b in bin_bytes:
                     char = bytes([b]).decode("latin-1")
                     if not self.validator.validate(char):
@@ -44,6 +38,4 @@ class Base64Evaluator(Evaluator):
             except (ValueError, base64.binascii.Error):
                 continue
 
-        for i in range(len(hits)):
-            print(f"{i}: {hits[i]}")
         return [hit for hit in hits if hit == True]

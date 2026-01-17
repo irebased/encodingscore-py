@@ -30,5 +30,4 @@ class EncodingScorer:
     def _score_counter(self, s, evaluator):
         hits = evaluator.eval(s)
         total = len(s.split(" ")) if evaluator.get_evaluation_type() == "token" else len(s)
-        print(len(hits))
         return len(hits) / total
