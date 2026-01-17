@@ -5,14 +5,14 @@ on:
     tags:
       - 'v*.*.*'
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     environment: PyPi
-
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
       - name: Checkout repository
