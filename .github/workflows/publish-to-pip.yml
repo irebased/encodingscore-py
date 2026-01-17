@@ -32,15 +32,9 @@ jobs:
         run: |
           python -m build --sdist --wheel
 
-      - name: Request PyPI OIDC token
-        id: pypi-oidc-token
-        uses: actions/pypi-oidc-token@v1
-        with:
-          repository: 'pypi'
-
       - name: Publish to PyPI
         run: |
           twine upload --non-interactive dist/*
         env:
           TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ steps.pypi-oidc-token.outputs.token }}
+          TWINE_PASSWORD: $ACTIONS_ID_TOKEN_REQUEST_TOKEN
